@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>40+ Programs</title>
+  </head>
+
+  <body>
+    <!-- Strings Start  -->
+    <div class="container-fluid">
+      <h1>Strings</h1>
+      <br />
+      <div class="row">
+        <!-- Length of a string? -->
+        <div class="col-md-3">
+          <h3>Length of a string?</h3>
+          <br />
+          Enter a string value: <br />
+          <input type="text" id="strLen" placeholder="Enter a string" /> <br />
+          <button class="button" onclick="stringLength()">Check</button>
+          <p id="strLenR" class="outputs"></p>
+        </div>
+        <!-- Copy one string to another string -->
+        <div class="col-md-3">
+          <h3>Copy one string to another</h3>
+          <br />
+          Enter string values: <br />
+          <input type="text" id="strCopy1" placeholder="Enter string 1" />
+          <br />
+          <input type="text" id="strCopy2" placeholder="Enter string 2" />
+          <br />
+          <button class="button" onclick="stringCopy()">Result</button>
+          <p id="strCopyR" class="outputs"></p>
+        </div>
+        <!-- Concatenate two strings -->
+        <div class="col-md-3">
+          <h3>Concatenate two strings</h3>
+          <br />
+          Enter string values: <br />
+          <input type="text" id="strConc1" placeholder="Enter string 1" />
+          <br />
+          <input type="text" id="strConc2" placeholder="Enter string 2" />
+          <br />
+          <button class="button" onclick="stringConcatenate()">Result</button>
+          <p id="strConcR" class="outputs"></p>
+        </div>
+        <!-- Compare two strings -->
+        <div class="col-md-3">
+          <h3>Compare two strings</h3>
+          <br />
+          Enter string values: <br />
+          <input type="text" id="strComp1" placeholder="Enter string 1" />
+          <br />
+          <input type="text" id="strComp2" placeholder="Enter string 2" />
+          <br />
+          <button class="button" onclick="stringCompare()">Find</button>
+          <p id="strCompR" class="outputs"></p>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <!-- Lowercase string to uppercase -->
+        <div class="col-md-3">
+          <h3>Lowercase string to uppercase</h3>
+          <br />
+          Enter string value: <br />
+          <input type="text" id="strLCase" placeholder="Enter a string value" />
+          <br />
+          <button class="button" onclick="stringLCase()">Result</button>
+          <p id="strLCaseR" class="outputs"></p>
+        </div>
+        <!-- Uppercase string to lowercase -->
+        <div class="col-md-3">
+          <h3>Uppercase string to lowercase</h3>
+          <br />
+          Enter string value: <br />
+          <input type="text" id="strUCase" placeholder="Enter a string value" />
+          <br />
+          <button class="button" onclick="stringUCase()">Result</button>
+          <p id="strUCaseR" class="outputs"></p>
+        </div>
+        <!-- Total number of alphabets, digits or special character in a string -->
+        <div class="col-md-5">
+          <h3>Alphabets, digits or special character in a string</h3>
+          <br />
+          Enter string value: <br />
+          <input type="text" id="strADS" placeholder="Enter a string value" />
+          <br />
+          <button class="button" onclick="stringADS()">Find</button>
+          <p id="strADSR" class="outputs"></p>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <!-- Last occurrence of a character  -->
+        <div class="col-md-3">
+          <h3>Last occurrence of a character</h3>
+          <br />
+          Enter string values: <br />
+          <input type="text" id="locS" placeholder="Enter a string" /> <br />
+          <input
+            type="text"
+            id="locC"
+            placeholder="Enter a single character"
+            maxlength="1"
+          />
+          <br />
+          <button class="button" onclick="stringLastOcc()">Find</button>
+          <p id="locR" class="outputs"></p>
+        </div>
+        <!-- First occurrence of a character  -->
+        <div class="col-md-3">
+          <h3>First occurrence of a character</h3>
+          <br />
+          Enter string values: <br />
+          <input type="text" id="focS" placeholder="Enter a string" /> <br />
+          <input
+            type="text"
+            id="focC"
+            placeholder="Enter a single character"
+            maxlength="1"
+          />
+          <br />
+          <button class="button" onclick="stringFirstOcc()">Find</button>
+          <p id="focR" class="outputs"></p>
+        </div>
+        <!-- Total number of words in a string. -->
+        <div class="col-md-3">
+          <h3>Number of words in string.</h3>
+          <br />
+          Enter string value: <br />
+          <input type="text" id="strNum" placeholder="Enter a string" /> <br />
+          <button class="button" onclick="numOfWords()">Find</button>
+          <p id="strNumR" class="outputs"></p>
+        </div>
+        <!-- Total number of vowels and consonants in a string. -->
+        <div class="col-md-3">
+          <h3>Number of vowels and consonants in a string.</h3>
+          <br />
+          Enter string value: <br />
+          <input type="text" id="vowCons" placeholder="Enter a string" /> <br />
+          <button class="button" onclick="vowelConsonantNum()">Find</button>
+          <p id="vowConsR" class="outputs"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
